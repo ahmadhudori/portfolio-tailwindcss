@@ -3,10 +3,98 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+            rel="stylesheet" />
         <link rel="stylesheet" href="output.css" />
         <title>Ahmad Hudori</title>
     </head>
     <body>
+        <!-- Header -->
+        <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+            <div class="container mx-auto">
+                <div class="flex items-center justify-between relative">
+                    <div class="px-4">
+                        <a href="#home" class="font-bold text-lg text-jerukTua block py-6"
+                            >Ahmadhudori</a
+                        >
+                    </div>
+                    <div class="flex items-center px-4">
+                        <button
+                            id="hamburger"
+                            name="hamburger"
+                            type="button"
+                            class="block absolute right-4 lg:hidden">
+                            <span
+                                class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span
+                                class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        </button>
+
+                        <nav
+                            id="nav-menu"
+                            class="absolute hidden py-4 bg-white shadow-lg rounded-lg max-w-[200px] w-full right-6 top-full lg:block lg:static lg:max-w-full bg-transparent lg:shadow-none lg:rounded-none lg:bg-transparent">
+                            <ul class="block lg:flex">
+                                <li class="group">
+                                    <a
+                                        href="#home"
+                                        class="text-base lg:text-sm text-primary py-2 mx-8 lg:mx-5 flex hover:text-jerukTua"
+                                        >Beranda</a
+                                    >
+                                </li>
+                                <li class="group">
+                                    <a
+                                        href="#about"
+                                        class="text-base lg:text-sm text-primary py-2 mx-8 lg:mx-5 flex hover:text-jerukTua"
+                                        >Tentang saya</a
+                                    >
+                                </li>
+                                <li class="group">
+                                    <a
+                                        href="#portfolio"
+                                        class="text-base lg:text-sm text-primary py-2 mx-8 lg:mx-5 flex hover:text-jerukTua"
+                                        >Portfolio</a
+                                    >
+                                </li>
+                                <li class="group">
+                                    <a
+                                        href="#portfolio"
+                                        class="text-base lg:text-sm text-primary py-2 mx-8 lg:mx-5 flex hover:text-jerukTua"
+                                        >Portfolio</a
+                                    >
+                                </li>
+                                <li class="group">
+                                    <a
+                                        href="#clients"
+                                        class="text-base lg:text-sm text-primary py-2 mx-8 lg:mx-5 flex hover:text-jerukTua"
+                                        >Clients</a
+                                    >
+                                </li>
+                                <li class="group">
+                                    <a
+                                        href="#blog"
+                                        class="text-base lg:text-sm text-primary py-2 mx-8 lg:mx-5 flex hover:text-jerukTua"
+                                        >Blog</a
+                                    >
+                                </li>
+                                <li class="group">
+                                    <a
+                                        href="#contact"
+                                        class="text-base lg:text-sm text-primary py-2 mx-8 lg:mx-5 flex hover:text-jerukTua"
+                                        >Contact</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
         <!-- Hero Section -->
         <section id="home" class="pt-36">
             <div class="container mx-auto">
@@ -139,5 +227,7 @@
             </div>
         </section>
         <!-- About Section End-->
+
+        <script src="../src/script.js"></script>
     </body>
 </html>
