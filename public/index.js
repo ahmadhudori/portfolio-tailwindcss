@@ -57,3 +57,50 @@ if (
 } else {
     darkToggle.checked = false;
 }
+
+// Validation input contact
+function validateInputContact() {
+    const name = document.querySelector("#name");
+    const e_mail = document.querySelector("#email");
+    const message = document.querySelector("#message");
+
+    if (!name.value || name.value.trim() === "") {
+        alert("input nama");
+        return false;
+    } else if (!e_mail.value || e_mail.value.trim() === "") {
+        alert("input email");
+        return false;
+    } else if (!message.value || message.value.trim() === "") {
+        alert("input pesan");
+        return false;
+    }
+
+    return true;
+}
+
+// Contact form to spreadsheet
+
+const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxhQlfT3aOtx19Blw8iq5xbdx_ALfqTZpsIX2CUxIdSpgyErYkFbBGitefN2TMayNqzdA/exec";
+const form = document.forms["submit-to-google-sheet"];
+
+form.addEventListener("submit", (e) => {
+    const btnKirim = document.querySelector(".btn-kirim");
+    const btnLoading = document.querySelector(".btn-loading");
+    e.preventDefault();
+
+    btnKirim.classList.toggle("hidden");
+    btnLoading.classList.toggle("hidden");
+
+    if (validateInputContact()) {
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+            .then((response) => {
+                console.log("Success!", response);
+                btnKirim.classList.toggle("hidden");
+                btnLoading.classList.toggle("hidden");
+                alert("submit sukses");
+                form.reset();
+            })
+            .catch((error) => console.error("Error!", error.message));
+    }
+});
